@@ -22,10 +22,6 @@ void reverseitr()
     head=prev;
     
 }
-void reverserec()
-{
-    
-}
 void delatpos(int pos)
 {   
     struct Node *ptr=head;
