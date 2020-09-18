@@ -113,7 +113,7 @@ void midofLL()
     else
     {
         struct Node *ptr1=head ,*ptr2=head;
-        while(ptr1!=NULL & ptr2->next!=NULL)
+        while(ptr1!=NULL & ptr2->next!=NULL) //two pointer approch o(nlogn)
         {
             ptr1=ptr1->next;
             ptr2=ptr2->next->next;
@@ -136,6 +136,7 @@ void print()
 
     }
 }
+
 int main()
 {
     head=NULL;
@@ -147,8 +148,5 @@ int main()
         create(x);
     }
     print();
-    reverseitr();
-    print();
-
     return 0;
 }
