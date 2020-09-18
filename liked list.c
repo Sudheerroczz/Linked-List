@@ -22,6 +22,22 @@ void reverseitr()
     head=prev;
     
 }
+
+void reverse(struct node* ptr){
+   if(ptr->next == NULL){
+      head = ptr;
+      return;
+    }
+ 
+    /* Calling reverse method recursively */
+ 
+    reverse(ptr->next);
+ 
+    struct node* rev = ptr->next;
+    rev->next = ptr;
+    ptr->next = NULL;
+}
+ 
 void delatpos(int pos)
 {   
     struct Node *ptr=head;
